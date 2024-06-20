@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio de botones</title>
+<h4>Calcula precios</h4>
+<style>
+  .calculator {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #5e5858;
+  }
+
+  .calculator input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .calculator button {
+    width: 30%;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .calculator button:hover {
+    background-color: #ffffff;
+  }
+
+  .calculator button.clear {
+    width: 65%;
+  }
+</style>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(45deg, #ff0000, #ffffff, #002aff, #4ecdc4);
+        background-size: 800% 800%;
+        animation: gradientBackground 5s ease infinite;
+    }
+
+    @keyframes gradientBackground {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    nav {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 10px 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #ffcc5c;
+    }
+
+    nav ul li a i {
+        margin-right: 8px;
+    }
+</style>
+</head>
+<body>
+
+<div class="calculator">
+  <input type="text" id="display" readonly>
+  <button onclick="addToDisplay('1')">1</button>
+  <button onclick="addToDisplay('2')">2</button>
+  <button onclick="addToDisplay('3')">3</button>
+  <button onclick="addToDisplay('4')">4</button>
+  <button onclick="addToDisplay('5')">5</button>
+  <button onclick="addToDisplay('6')">6</button>
+  <button onclick="addToDisplay('7')">7</button>
+  <button onclick="addToDisplay('8')">8</button>
+  <button onclick="addToDisplay('9')">9</button>
+  <button onclick="addToDisplay('0')">0</button>
+  <button onclick="addToDisplay('+')">+</button>
+  <button onclick="addToDisplay('-')">-</button>
+  <button onclick="addToDisplay('*')">*</button>
+  <button onclick="addToDisplay('/')">/</button>
+  <button onclick="addToDisplay('.')">.</button>
+  <button onclick="addToDisplay('**')">**</button>
+
+  <button onclick="calculate()">=</button>
+  <button class="clear" onclick="clearDisplay()">Clear</button>
+</div>
+
+<script>
+  function addToDisplay(value) {
+    document.getElementById('display').value += value;
+  }
+
+  function calculate() {
+    var result = eval(document.getElementById('display').value);
+    document.getElementById('display').value = result;
+  }
+
+  function clearDisplay() {
+    document.getElementById('display').value = '';
+  }
+</script>
+
+
+</body>
+</html>

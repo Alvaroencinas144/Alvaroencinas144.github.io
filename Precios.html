@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable con Texto Dependiente</title>
+   
+         <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #37cc5f, #e4eb29, #dd9b20, #ff351e);
+            background-size: 800% 800%;
+            animation: gradientBackground 5s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc5c;
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+        }
+        .hidden {
+            display: none;
+        }
+        .visible {
+            display: block;
+        }
+        .text-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #4b0b0b;
+            background-color: #255328;
+        }
+       
+        .container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        
+        .image-container {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .circle {
+            clip-path: circle(50%);
+        }
+        
+        .triangle {
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        
+        .star {
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style> 
+    </style>
+    </style>
+</head>
+<body>
+
+    <label for="dropdown">Selecciona una opción:</label>
+    <select id="dropdown" name="dropdown" onchange="showText()">
+        <option value="" disabled selected>Elige una opción</option>
+        <option value="cortee">corte normal</option>
+        <option value="Desvanecidos">desvanecidos</option>
+        <option value="cyb">Corte y barba</option>
+        <option value="ccd">corte con diseño</option>
+        <option value="barba">barba</option>
+        <option value="ceja">cejas</option>
+        <option value="marca">marcada de cabello</option>
+        <option value="sc">servicio completo</option>
+    </select>
+
+    <!-- Divs para mostrar el texto correspondiente -->
+    <div id="text-cortee" class="text-box hidden">
+        <p>el corte normal cuesta 150 pesos</p>
+    </div>
+    <div id="text-Desvanecidos" class="text-box hidden">
+        <p>los desvanecidos cuestan 150 pesos</p>
+    </div>
+    <div id="text-cyb" class="text-box hidden">
+        <p>el corte con barba cuesta 180 pesos</p>
+    </div>
+    <div id="text-ccd" class="text-box hidden">
+        <p>el corte con diseño cuesta 180 pesos</p>
+    </div>
+    <div id="text-barba" class="text-box hidden">
+        <p>la barba cuesta 80 pesos</p>
+    </div>
+    <div id="text-ceja" class="text-box hidden">
+        <p>la ceja cuesta 50 pesos</p>
+    </div>
+    <div id="text-marca" class="text-box hidden">
+        <p>la marcada de pelo cuesta 80 pesos</p>
+    </div>
+    <div id="text-sc" class="text-box hidden">
+        <p>el servicio completo con:corte,barba,ceja,tinte de barba etc cuesta 200/250 pesos</p>
+    </div>
+    <script>
+        function showText() {
+            // Ocultar todos los divs
+            const textDivs = document.querySelectorAll('.text-box');
+            textDivs.forEach(div => div.classList.add('hidden'));
+
+            // Obtener la opción seleccionada
+            const selectedValue = document.getElementById('dropdown').value;
+
+            // Mostrar el div correspondiente a la opción seleccionada
+            if (selectedValue) {
+                document.getElementById(`text-${selectedValue}`).classList.remove('hidden');
+            }
+        }
+    </script>
+    <div class="container">
+        <div class="image-container circle">
+            <img src="ba.png" alt="Imagen en Círculo">
+        </div>
+        <div class="image-container triangle">
+            <img src="imgbar2.jpg" alt="Imagen en Triángulo">
+        </div>
+        <div class="image-container star">
+            <img src="imgbar5.jpg" alt="Imagen en Estrella">
+        </div>
+    </div>
+
+    
+</body>
+</html>

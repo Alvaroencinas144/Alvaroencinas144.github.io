@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Navegación Básico</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #ff0000, #ffffff, #002aff, #4ecdc4);
+            background-size: 800% 800%;
+            animation: gradientBackground 5s ease infinite;
+        }
+
+        @keyframes gradientBackground {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc5c;
+        }
+
+        nav ul li a i {
+            margin-right: 8px;
+        }
+    </style>
+    </style>
+</head>
+<body bgcolor="gray">
+    <nav>
+        <ul>
+            <li><a href="Servicios.html">Servicios</a></li>
+            <li><a href="Precios.html">Precios</a></li>
+            <li><a href="https://maps.app.goo.gl/cBRRDpygoxcS6UQaA">Ubicacion</a></li>
+            <li><a href="Horarios.html">Horarios</a></li>
+            <li><a href="Fotos.html">Fotos</a></li>
+            <li><a href="Creditos.html">Creditos</a></li>
+            <li><a href="calpre.html">calcular precios</a></li>
+            
+          
+        </ul>
+    </nav> 
+    
+    <a href="Servicios.html"><img class="masked-image" src="farobarber.jpg" alt="Imagen" style="clip-path: url(#circle-mask);"></a>
+   
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mar.css"> <!-- Enlace al archivo CSS separado -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="marquee-container">
+        <marquee id="marquee" behavior="scroll" direction="left">Gracias por visitar la pagina de la barberia buenos aires</marquee> 
+    </div>
+    <br><button id="toggleMarqueeBtn" onclick="toggleMarquee()">Mostrar/Ocultar Marquesina</button><br><br><br><br><br>
+<script>
+    function toggleMarquee() {
+            const marquee = document.getElementById('marquee-container');
+            marquee.style.display = marquee.style.display === 'none' ? 'block' : 'none';
+        }
+</script>
+
+</body>
+</html>
+    
+</body>
+</html>

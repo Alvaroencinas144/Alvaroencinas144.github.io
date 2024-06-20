@@ -1,0 +1,17 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor {
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    display: flex;
+     /* Centra horizontalmente */
+    /* Centra verticalmente */
+    text-align: center;
+    background-image: url('fondooo.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+    
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserción de GIF en HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .gif-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">Servicio de Faciales/mascarillas</h1>
+    
+
+    <div class="gif-container">
+        <!-- Aquí insertamos el GIF -->
+        <img src="mascarillaa.jpg" alt="Barba">
+    </div>
+
+    <picture>
+        <source srcset="ejemplo-pequeno.gif" media="(max-width: 600px)">
+        <source srcset="ejemplo-grande.gif" media="(min-width: 601px)">
+       
+    </picture>
+    
+</body>
+</html>
